@@ -23,19 +23,23 @@
 &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &mo 1   &kp ENTER  &mo 3   &mkp MB1  &kp SPACE  &mo 1      &kp RIGHT_ALT  &kp RIGHT_GUI  &kp RCTRL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp K_VOL_UP K_VOLUME_DOWN>,
+                <&inc_dec_kp DOWN UP>;
         };
 
         VOLF {
             bindings = <
-&kp ESC            &kp F1  &kp F2  &kp F3  &kp F4            &kp F5  &kp F6    &kp F7             &kp F8  &kp F9  &kp F10        &kp F11
-&kp K_VOLUME_UP    &trans  &trans  &trans  &trans            &trans  &trans    &trans             &trans  &trans  &trans         &kp F12
-&kp K_VOLUME_DOWN  &trans  &trans  &trans  &trans            &trans  &trans    &trans             &trans  &trans  &trans         &trans
-&trans             &trans  &trans  &trans  &trans            &trans  &trans    &trans             &trans  &trans  &kp BACKSLASH  &trans
-&trans             &trans  &trans  &trans  &kp LEFT_BRACKET  &trans  &mkp MB2  &kp RIGHT_BRACKET  &trans  &trans  &trans         &trans
+&kp ESC            &kp F1  &kp F2  &kp F3  &kp F4            &kp F5  &kp F6    &kp F7             &kp F8    &kp F9     &kp F10        &kp F11
+&kp K_VOLUME_UP    &trans  &trans  &trans  &trans            &trans  &trans    &trans             &kp UP    &trans     &trans         &kp F12
+&kp K_VOLUME_DOWN  &trans  &trans  &trans  &trans            &trans  &trans    &kp LEFT           &kp DOWN  &kp RIGHT  &trans         &trans
+&trans             &trans  &trans  &trans  &trans            &trans  &trans    &trans             &trans    &trans     &kp BACKSLASH  &trans
+&trans             &trans  &trans  &trans  &kp LEFT_BRACKET  &trans  &mkp MB2  &kp RIGHT_BRACKET  &trans    &trans     &trans         &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_AC_REDO C_AC_UNDO>;
         };
 
         BTRGB {
@@ -47,16 +51,18 @@
 &trans      &trans        &trans        &trans        &kp MINUS     &trans        &mkp MB2         &kp EQUAL        &trans           &trans           &trans           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp K_REDO K_UNDO>;
         };
 
         scroll-layers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB2  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
