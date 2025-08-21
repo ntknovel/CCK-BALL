@@ -37,7 +37,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp C_AC_REDO C_AC_UNDO>;
+                <&inc_dec_kp LC(Y) LC(Z)>;
         };
 
         BTRGB {
@@ -49,9 +49,7 @@
 &trans      &trans        &trans        &trans        &kp MINUS     &trans        &mkp MB2         &kp EQUAL        &trans           &trans           &trans           &trans
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>,
-                <&inc_dec_kp K_REDO K_UNDO>;
+            sensor-bindings = <&inc_dec_kp HOME END>, <&inc_dec_kp LC(Y) LC(Z)>;
         };
 
         scroll-layers {
@@ -63,7 +61,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB2  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp LA(LEFT) LA(RIGHT)>,
+                <&inc_dec_kp LC(Y) LC(Z)>;
         };
 
         snipe-layers {
